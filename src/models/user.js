@@ -1,0 +1,19 @@
+export default{
+  namespace:"user",
+  state:{
+    username:null,
+    password:null,
+    isSuccess:false,
+    message:'',
+    loading:false,
+  },
+  effects:{
+      *login(){}
+  },
+  reducers:{
+      loginSuccess(){},
+      loginError(){},
+      showMessage(){},
+      showLoding(){}
+  }
+}
