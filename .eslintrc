@@ -1,3 +1,7 @@
 {
-  "extends": "umi"
+  "extends": ["airbnb", "prettier","umi"],
+  "env":{
+    "browser":true,
+    "es6":true
+  }
 }

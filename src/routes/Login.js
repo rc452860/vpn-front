@@ -2,10 +2,15 @@ import React from 'react'
 // eslint-disable-next-line
 import {Form, Icon, Input, Button, Checkbox} from 'antd'
 import {connect} from 'dva'
-import styles from './User.css'
+import styles from './styles/User.css'
 
 const FormItem = Form.Item;
-class User extends React.Component {
+
+@connect(({login})=>({
+  login
+}))
+@Form.create()
+export default class Login extends React.Component {
   // eslint-disable-next-line
   constructor() {
     super()
@@ -23,7 +28,6 @@ class User extends React.Component {
 
   render() {
     const {getFieldDecorator} = this.props.form;
-    console.log(this.props)
     return (
       <Form onSubmit={this.props.login} className={styles.from}>
         <FormItem>
@@ -74,4 +78,3 @@ class User extends React.Component {
     )
   }
 }
-export default connect()(Form.create()(User));
