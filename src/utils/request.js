@@ -74,7 +74,7 @@ export default function request(url, options) {
     .then(data => ({ data }))
     .catch(
       e => {
-        cosnole.error(e);
+        console.error(e);
         // const { dispatch } = store;
         // const status = e.name;
         // if (status === 401) {

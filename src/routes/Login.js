@@ -25,11 +25,15 @@ export default class Login extends React.Component {
   componentWillUnmount() {
     document.body.style = this.bodyStyle;
   }
+  
+  login(){
+    console.log(arguments)
+  }
 
   render() {
     const {getFieldDecorator} = this.props.form;
     return (
-      <Form onSubmit={this.props.login} className={styles.from}>
+      <Form onSubmit={this.login} className={styles.from}>
         <FormItem>
           {getFieldDecorator('username', {
             rules: [
