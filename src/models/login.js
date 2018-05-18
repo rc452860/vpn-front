@@ -1,4 +1,5 @@
-import {login} from '../services/user'
+import {login} from '../services/login'
+import {routerRedux} from 'dva/router'
 
 export default{
     namespace:"login",
@@ -8,7 +9,14 @@ export default{
     effects:{
         *login({payload},{call,put}){
             const response = yield call(login,payload);
-            
+            yield(put({
+                type:'changeLoginStatus',
+                payload:{
+                    status:response.data.status
+                }
+            }))
+            // TODO 持久化token
+            yield put(routerRedux.push('/'))
         }
     },
     reducers:{

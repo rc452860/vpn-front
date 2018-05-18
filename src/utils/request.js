@@ -51,10 +51,9 @@ export default function request(url, options) {
     credentials: 'include',
   };
 
-  const newOptions = { ...defaultOptions, options }
-
-  if (newOptions.method === 'POST' || newOptions.method === 'GET') {
-    if (!newOptions.body instanceof FormData) {
+  const newOptions = { ...defaultOptions, ...options }
+  if (newOptions.method === 'POST' || newOptions.method === 'PUT') {
+    if (!(newOptions.body instanceof FormData)) {
       newOptions.headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=utf-8',
@@ -68,7 +67,7 @@ export default function request(url, options) {
       };
     }
   }
-  return fetch(url, options)
+  return fetch(url, newOptions)
     .then(checkStatus)
     .then(parseJSON)
     .then(data => ({ data }))

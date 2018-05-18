@@ -12,7 +12,7 @@ const loginFail = Mock.mock({'nickname': null, 'username': null, 'avatar': null,
 export default {
   [`post /apiv1/user/login`](req, res) {
     console.log(req)
-    if(req.body.username === loginSuccess.username && req.body.password === 'killer'){
+    if(req.body.username === 'sakura' && req.body.password === 'killer'){
       res.json(loginSuccess)
     }else{
       res.json(loginFail)

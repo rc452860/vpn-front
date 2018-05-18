@@ -45,9 +45,6 @@ export const routerConfig = app => [
     path:"/login",
     component:dynamicWrapper(app,['login'],()=>import('../routes/Login'))
   },{
-    path:"/products",
-    component:dynamicWrapper(app,['products'],()=>import('../routes/Products'))
-  },{
     path:"/test",
     component:dynamicWrapper(app,['test'],()=>import('../routes/test'))
   },

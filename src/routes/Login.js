@@ -6,6 +6,7 @@ import styles from './styles/User.css'
 
 const FormItem = Form.Item;
 
+
 @connect(({login})=>({
   login
 }))
@@ -25,13 +26,28 @@ export default class Login extends React.Component {
   componentWillUnmount() {
     document.body.style = this.bodyStyle;
   }
+
   
-  login(){
-    console.log(arguments)
+  
+  login = (e) => {
+    e.preventDefault();
+    const {validateFields} = this.props.form;
+    const {dispatch} = this.props;
+    validateFields((err,values)=>{
+      if(!err){
+        console.log(values);
+        dispatch({
+          type:'login/login',
+          payload:{
+            ...values
+          }
+        })
+      }
+    })
   }
 
   render() {
-    const {getFieldDecorator} = this.props.form;
+    const {getFieldDecorator,getFieldsError} = this.props.form;
     return (
       <Form onSubmit={this.login} className={styles.from}>
         <FormItem>
