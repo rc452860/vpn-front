@@ -1,0 +1,42 @@
+/* body{
+    background:#008573;
+} */
+
+.from {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.login_form_button {
+    width: 100%;
+}
+
+.login_form_forgot {
+    float: right;
+}
+
+.login_form_register {
+    float: left;
+}
+
+:global(.ant-input) {
+    border-width: 0 0 1px 0 !important;
+    border-radius: 0 !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    color: #FFF;
+}
+
+:global(.ant-input:focus) {
+    box-shadow: none !important;
+}
+
+
+
+:global(.ant-checkbox-wrapper) {
+    color: #FFF;
+}
+
+:global(.ant-form-item-children) {
+    color: #FFF;
+}

@@ -96,3 +96,8 @@ export default function request(url, options) {
       }
     );
 }
+
+export const KEY = {
+  SUCCESS:'success',
+  FAILURE:'failure'
+}

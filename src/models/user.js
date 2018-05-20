@@ -1,14 +1,12 @@
 export default{
   namespace:"user",
   state:{
-    username:null,
-    password:null,
-    isSuccess:false,
-    message:'',
-    loading:false,
+    username:'',
+    nickname:''
   },
   effects:{
-      *login(){}
+      *getUserInfo({payload},{put,call}){
+      }
   },
   reducers:{
       loginSuccess(){},

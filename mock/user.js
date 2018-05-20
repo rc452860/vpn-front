@@ -1,16 +1,16 @@
 import Mock from 'mockjs'
 
 const Random = Mock.Random
+
 const loginSuccess = Mock.mock({
-  'token': Random.string('lower', 32),
-  'status': 'success'
+  username:'sakura',
+  nickname:Random.name()
 })
 
-const loginFail = Mock.mock({'code': '01', 'status': 'failure', 'message': '用户名或密码不正确'})
-
+const loginFail = Mock.mock({'status': 'failure','code':'01', 'message': '暂未登陆'})
 
 export default {
-  [`POST /apiv1/user/login`] (req, res) {
+  [`post /apiv1/user/login`](req, res) {
     if (req.body.username === 'sakura' && req.body.password === 'killer') {
       res.json(loginSuccess)
     } else {

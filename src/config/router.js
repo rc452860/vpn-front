@@ -36,16 +36,13 @@ const dynamicWrapper = (app, models, component) => {
       })
     }
   })
-} 
+}
 export const routerConfig = app => [
   {
     path:"/",
-    component:dynamicWrapper(app,[],()=>import('../routes/IndexPage'))
+    component:dynamicWrapper(app,['user'],()=>import('../routes/User'))
   },{
     path:"/login",
     component:dynamicWrapper(app,['login'],()=>import('../routes/Login'))
-  },{
-    path:"/test",
-    component:dynamicWrapper(app,['test'],()=>import('../routes/test'))
   },
 ]
