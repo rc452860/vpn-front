@@ -7,3 +7,10 @@
   vertical-align: middle;
   padding-left: 10px;
 }
+.vpn_avatar{
+  float: left;
+}
+.vpn_acc_info{
+  float: right;
+  vertical-align: middle;
+}

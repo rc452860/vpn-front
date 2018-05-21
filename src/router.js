@@ -1,14 +1,13 @@
 import React from 'react';
 import {Router, Route, Switch, routerRedux} from 'dva/router';
 import {routerConfig} from './config/router';
+import {KEY as STORE_KEY,get} from './utils/store';
 
 function interceptor(app) {
   return function (location) {
     const {_store} = app;
     const {login} = _store.getState();
-    console.log(app,location)
-    console.log(location.pathname)
-    if(location.pathname !== '/login' && (!login || login.status !== 'success')){
+    if(location.pathname !== '/login' && (!login || login.status !== 'success') && !get(STORE_KEY.TOKEN)){
       _store.dispatch(routerRedux.push("/login"));
     }
   }

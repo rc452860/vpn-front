@@ -1,4 +1,4 @@
-import {login} from '../services/login'
+import {login} from '../services/api'
 import {routerRedux} from 'dva/router'
 import * as store from '../utils/store'
 import * as object from '../utils/object'

@@ -2,7 +2,7 @@
  *  姓名生成颜色
  * @param {*} name username
  */
-export function nameToColor(name){
+export function nameToColor(name = 'a'){
   /**
    * 生成HSL颜色并转换成RGB颜色返回
    * HSL分别代表 色相(H) 饱和度(S) 亮度(L)
@@ -16,7 +16,9 @@ export function nameToColor(name){
   const h = 360 / 26 * code;
   const s = 100 / 26 * code;
   const l = 100 / 26 * code;
-  return HSVtoRGB(h,parseFloat(s)/100.0,parseFloat(l)/100.0);
+  const color =  HSVtoRGB(h,parseFloat(s)/100.0,parseFloat(l)/100.0);
+  console.log(name,color)  
+  return color;
 }
 
 

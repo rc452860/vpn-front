@@ -1,18 +1,17 @@
-import {getUserInfo} from '../services/api'
+import {getNodes} from '../services/api'
 import {prop} from '../utils/object'
 
 export default{
-  namespace:"user",
+  namespace:"nodes",
   state:{
-    username:null,
-    nickname:null,
-    remainTime:null
+    list:null
   },
   effects:{
-      *getUserInfo({payload},{put,call}){
-        const {data} = yield call(getUserInfo);
+      *getNodes({payload},{put,call}){
+        const {data} = yield call(getNodes);
+        console.log(data)
         yield put({
-          type:'initUserInfo',
+          type:'initNodes',
           payload:{
             ...data
           }
@@ -20,7 +19,7 @@ export default{
       }
   },
   reducers:{
-    initUserInfo(state,{payload}){
+    initNodes(state,{payload}){
       console.log(payload)
       return{
         ...state,
