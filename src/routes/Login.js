@@ -20,8 +20,9 @@ export default class Login extends React.Component {
 
   UNSAFE_componentWillMount() {
     this.bodyStyle = document.body.style;
-    document.body.style.background = "#008573";
+    document.body.style.background = "#1d976c";
     document.body.style.color = "#FFF";
+    document.body.style.backgroundImage = 'linear-gradient(to top, #0ba360 0%, #3cba92 100%)';
   }
 
   componentWillUnmount() {
@@ -59,6 +60,7 @@ export default class Login extends React.Component {
             ]
           })(
             <Input
+              autoComplete = "off"
               className={styles.login_input}
               prefix={< Icon type = "user" style = {{ color: 'rgba(255,255,255,.5)' }}/>}
               placeholder="用户名"/>
@@ -74,6 +76,7 @@ export default class Login extends React.Component {
             ]
           })(
             <Input
+              autoComplete = "off"
               className={styles.login_input}
               prefix={< Icon type = "lock" style = {{ color: 'rgba(255,255,255,.5)' }}/>}
               type="password"

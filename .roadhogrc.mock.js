@@ -37,4 +37,4 @@ fs.readdirSync(path.join(__dirname+'/mock')).forEach((file)=>{
   }
 })
 console.log(mock)
-export default delay(mock,5000);
+export default delay(mock,1000);

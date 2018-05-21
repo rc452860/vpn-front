@@ -4,7 +4,7 @@ import {prop} from '../utils/object'
 export default{
   namespace:"nodes",
   state:{
-    list:null
+    list:[]
   },
   effects:{
       *getNodes({payload},{put,call}){
@@ -20,7 +20,6 @@ export default{
   },
   reducers:{
     initNodes(state,{payload}){
-      console.log(payload)
       return{
         ...state,
         ...payload
