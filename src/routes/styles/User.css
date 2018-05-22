@@ -18,11 +18,17 @@
 }
 .vpn_item{
   padding: 5px 10px;
-  border-bottom: 1px dashed #CCC;
-  color:#fff;
-  font-size: 12px;
+  /* border-bottom: 1px dashed #CCC; */
+  color:rgba(255,255,255,.6);
+  font-size: 14px;
   line-height: 1.5;
-  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.vpn_item:hover{
+  color:rgb(255,255,255) !important;
+  background: rgba(0,0,0,.1) !important;
+}
+.vpn_item:nth-child(2n){
+  background: rgba(0,0,0,.05)
 }
 .vpn_item:after{
   visibility: hidden;
@@ -37,3 +43,8 @@
   min-height: 1.5em;
 }
 
+
+:global(.queue-anim-leaving){
+  position: absolute;
+  width: 100%;
+}

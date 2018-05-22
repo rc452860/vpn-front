@@ -20,9 +20,8 @@ export default class Login extends React.Component {
 
   UNSAFE_componentWillMount() {
     this.bodyStyle = document.body.style;
-    document.body.style.background = "#1d976c";
+    document.body.style.background = "linear-gradient(to top, rgb(25, 91, 92) 0%, rgb(46, 185, 121) 100%) rgb(29, 151, 108)";
     document.body.style.color = "#FFF";
-    document.body.style.backgroundImage = 'linear-gradient(to top, #0ba360 0%, #3cba92 100%)';
   }
 
   componentWillUnmount() {
