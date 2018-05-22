@@ -17,7 +17,6 @@ export function nameToColor(name = 'a'){
   const s = 100 / 26 * code;
   const l = 100 / 26 * code;
   const color =  HSVtoRGB(h,parseFloat(s)/100.0,parseFloat(l)/100.0);
-  console.log(name,color)  
   return color;
 }
 

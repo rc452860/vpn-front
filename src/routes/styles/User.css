@@ -1,7 +1,9 @@
 .vpn_header{
-  padding:0 20px !important;
+  padding:0 10px !important;
   position: fixed;
   width: 100%;
+  background: none;
+  border-bottom: 1px dotted #ccc;
 }
 .vpn_namespan{
   vertical-align: middle;
@@ -14,3 +16,24 @@
   float: right;
   vertical-align: middle;
 }
+.vpn_item{
+  padding: 5px 10px;
+  border-bottom: 1px dashed #CCC;
+  color:#fff;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.vpn_item:after{
+  visibility: hidden;
+  display: block;
+  content: ' ';
+  height: 0;
+  clear: both;
+}
+.vpn_item p{
+  margin: 0px;
+  min-width: 1px;
+  min-height: 1.5em;
+}
+

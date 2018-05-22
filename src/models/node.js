@@ -9,7 +9,6 @@ export default{
   effects:{
       *getNodes({payload},{put,call}){
         const {data} = yield call(getNodes);
-        console.log(data)
         yield put({
           type:'initNodes',
           payload:{

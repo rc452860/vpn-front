@@ -21,7 +21,6 @@ export default{
   },
   reducers:{
     initUserInfo(state,{payload}){
-      console.log(payload)
       return{
         ...state,
         ...payload
